@@ -4,7 +4,8 @@
   "description": "back-end do e-commerce skate midia, com acesso ao mongoDB para criacao de usuario e firebase storage para armazenamento de midia",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
