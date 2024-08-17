@@ -11,21 +11,15 @@ const cors = require('cors')
 const verifyToken = require('./Controller/verifyToken')
 
 mongoose.connect(process.env.MONGODB_CONNECT)
-.then(() => {
-    console.log('--MongoDB Conectado--')
-})
-.catch(error => {
-    console.log(error)
-})
 
 app.use(cors())
 app.use(express.json(), express.urlencoded({ extended: false }))
+
+app.get('/', (req, res) => res.send('ola mundo'))
 
 app.use('/token', verifyToken)
 app.use('/user', userRouter)
 app.use('/products', productsRouter)
 app.use('/purchase', auth, purchasesRouter)
 
-app.listen(PORT, () => {
-    console.log(`Rodando na porta ${PORT}`)
-})
+app.listen(PORT)
