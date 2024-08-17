@@ -1,0 +1,13 @@
+# Ignorar a pasta node_modules
+node_modules/
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos de configuração do sistema
+.DS_Store
+Thumbs.db
+.env
+
+# Ignorar arquivos temporários do editor
+Firebase/serviceAccountKey.json
