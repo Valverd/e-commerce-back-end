@@ -15,8 +15,6 @@ mongoose.connect(process.env.MONGODB_CONNECT)
 app.use(cors())
 app.use(express.json(), express.urlencoded({ extended: false }))
 
-app.get('/', (req, res) => res.send('ola mundo'))
-
 app.use('/token', verifyToken)
 app.use('/user', userRouter)
 app.use('/products', productsRouter)
